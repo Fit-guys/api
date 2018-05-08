@@ -16,7 +16,7 @@ app.listen(port, host);
 const db = admin.database();
 
 app.get('/users', (req, res) => {
-    db.ref('/users/' + req.param('uid')).once('value').then(function(snapshot) {
+    db.ref('/users/' + req.param('uid')).once('value').then((snapshot) => {
             res.send(snapshot.val().progress);
         }
     );
