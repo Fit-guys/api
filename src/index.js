@@ -2,7 +2,7 @@ const admin = require('./firebase-admin');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-
+const path              = require('path');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -21,6 +21,7 @@ app.get('/users', (req, res) => {
         }
     );
 });
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/save',(req, res) => {
     const uid = req.body.uid;
