@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "fit-project-unity",
+"dataUrl": "MainShit.data.unityweb",
+"asmCodeUrl": "MainShit.asm.code.unityweb",
+"asmMemoryUrl": "MainShit.asm.memory.unityweb",
+"asmFrameworkUrl": "MainShit.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
