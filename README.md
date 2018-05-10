@@ -1,7 +1,4 @@
-# express-firebase
-
-Simple Firebase Admin Server using NodeJS.
-
+![Preview](https://i.imgur.com/X18nmO1.png)
 You used Firebase for auth, realtime DB, and all. Finally you need your own server
 to integrate with 3rd party services, or maybe custom token, or you need server-side operations.
 
