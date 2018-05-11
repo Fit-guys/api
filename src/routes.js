@@ -14,9 +14,15 @@ router.use('/api', firebaseMiddleware.auth);
 
 router.get('/', (req, res) => {
     res.json({
-        message: 'Home'
+        message: 'Something Ain\'t Here'
     });
 });
+
+router.get('/id_users', (req, res) => {
+    res.json({
+        users:['Moris Fluttershy','Ruby Doe', 'Alexandr Shwartznigger', 'Unknown', 'George Lussia']
+    });
+})
 
 router.get('/api/hello', (req, res) => {
     res.json({

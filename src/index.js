@@ -14,7 +14,7 @@ app.use('/', router);
 app.listen(port, host);
 
 const db = admin.database();
-
+app.use('/id_users', router);
 app.get('/users', (req, res) => {
     db.ref('/users/' + req.param('uid')).once('value').then((snapshot) => {
             res.send(snapshot.val().progress);
@@ -33,7 +33,7 @@ app.post('/save',(req, res) => {
 
     console.log('Sent progress change request for uid = {' + uid + '} and new progress is {' + newProgress + '}.');
 
-    res.end('ti hule tut progress menyaesh sobaka sutulaya???');
+    res.end('ti hule tut progress menyaesh sobaka sutulaya???'); // ... 
 });
 
 
