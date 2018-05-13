@@ -14,8 +14,13 @@ app.use('/', router);
 app.listen(port, host);
 
 const db = admin.database();
+
 app.use('/id_users', router);
 app.get('/users', (req, res) => {
+    res.set("Access-Control-Allow-Credentials", "true");
+    res.set("Access-Control-Allow-Headers", "Accept, X-Access-Token, X-Application-Name, X-Request-Sent-Time");
+    res.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    res.set("Access-Control-Allow-Origin", "*");
     db.ref('/users/' + req.param('uid')).once('value').then((snapshot) => {
             res.send(snapshot.val().progress);
         }
